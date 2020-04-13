@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      msg: ''
+      msg: '1'
     }
   }
   render(){
@@ -28,5 +28,7 @@ const mapStateToProps = (store) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ clickHelloAction }, dispatch);
+const mapDispatchToProps = (dispatch) => 
+  bindActionCreators({ clickHelloAction }, dispatch);
+  
 export default connect(mapStateToProps, mapDispatchToProps)(App);
